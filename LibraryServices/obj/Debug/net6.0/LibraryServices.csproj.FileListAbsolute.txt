@@ -1,0 +1,15 @@
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\bin\Debug\net6.0\LibraryServices.deps.json
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\bin\Debug\net6.0\LibraryServices.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\bin\Debug\net6.0\LibraryServices.pdb
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\bin\Debug\net6.0\DataLibrary.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\bin\Debug\net6.0\DataLibrary.pdb
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.csproj.AssemblyReference.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.AssemblyInfoInputs.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.AssemblyInfo.cs
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.csproj.CoreCompileInputs.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.csproj.CopyComplete
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\refint\LibraryServices.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\LibraryServices.pdb
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryServices\obj\Debug\net6.0\ref\LibraryServices.dll

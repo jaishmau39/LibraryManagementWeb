@@ -1,0 +1,14 @@
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\bin\Debug\net6.0\DataLibrary.deps.json
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\bin\Debug\net6.0\DataLibrary.runtimeconfig.json
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\bin\Debug\net6.0\DataLibrary.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\bin\Debug\net6.0\DataLibrary.pdb
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.AssemblyReference.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfo.cs
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\refint\DataLibrary.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.pdb
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\DataLibrary.genruntimeconfig.cache
+C:\Users\jaish\source\repos\LibraryManagementWeb\DataLibrary\obj\Debug\net6.0\ref\DataLibrary.dll

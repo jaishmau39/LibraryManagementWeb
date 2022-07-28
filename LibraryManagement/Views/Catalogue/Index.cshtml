@@ -1,0 +1,42 @@
+﻿@model LibraryManagement.Models.Catalogue.CatalogueIndexList
+@{
+    ViewBag.Title = "Library Catalogue";
+}
+
+<h3>@ViewBag.Title</h3>
+
+<div id="assets">
+    <div id="assets table">
+        <table class= "table table-condensed" id="catalogue index table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Author / Director</th>
+                    <th>Dewey Index Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.AssetList)
+                {
+                    <tr class="asset-row">
+                        <td class="">
+                            <a asp-controller="Catalogue" asp-action="Items" asp-route-id="@item.Id">
+                                <img src = "@item.ImageUrl" class="asset-image">
+                            </a>  
+                        </td>
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+                            @item.DirectorOrAuthor
+                        </td>
+                        <td>
+                            @item.DeweyIndex
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
