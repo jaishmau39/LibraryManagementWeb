@@ -6,7 +6,7 @@
 <h3>@ViewBag.Title</h3>
 
 <div id="assets">
-    <div id="assets table">
+    <div id="assets_table">
         <table class= "table table-condensed" id="catalogue index table">
             <thead>
                 <tr>
@@ -21,7 +21,7 @@
                 {
                     <tr class="asset-row">
                         <td class="">
-                            <a asp-controller="Catalogue" asp-action="Items" asp-route-id="@item.Id">
+                            <a asp-controller="Catalogue" asp-action="MoreInformation" asp-route-id="@item.Id">
                                 <img src = "@item.ImageUrl" class="asset-image">
                             </a>  
                         </td>

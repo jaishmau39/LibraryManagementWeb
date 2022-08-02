@@ -32,5 +32,27 @@ namespace LibraryManagement.Controllers
 
         }
 
+        public IActionResult MoreInformation(int Id)
+        {
+            var Asset = _assets.GetById(Id);
+
+            var assetInformation = new AssetInformation
+            {
+                Asset_ID = Id,
+                ImageUrl = Asset.ImageUrl,
+                Title = Asset.Title,
+                Cost = Asset.Cost,
+                Year = Asset.Year,
+                AuthororDirector = _assets.GetAuthororDirector(Id),
+                DeweyIndex = _assets.GetDeweyIndex(Id),
+                ISBN = _assets.GetISBN(Id),
+                Availability = Asset.Availability.Status,
+                PresentLocation = _assets.GetBranchLocation(Id).Branch_Name,
+
+            };
+            return View(assetInformation);
+
+        }
+
     }
 }

@@ -1,0 +1,58 @@
+﻿@model LibraryManagement.Models.Catalogue.AssetInformation
+
+<div class="container">
+    <div class="page-header clearfix detailHeading">
+        <h2 class="text-muted">View Library Item</h2>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <image class="detailImage" src="@Model.ImageUrl" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <p id="assetTitle">@Model.Title</p>
+            <p id="assetAuthororDirector">@Model.AuthororDirector</p>
+            <p id="assetAvailability">@Model.Availability</p>
+            <p id="assetType">@Model.Type</p>
+            <p id="assetLocation">@Model.PresentLocation</p>
+
+            @if(Model.Availability == "Lost")
+            {
+                <p>This item has been lost.</p>
+                <p><a class="btn btn-lg btn-danger" role="button" asp-controller="Catalogue" asp-action="MarkasFound" asp-route-id= "@Model.Asset_ID">Item Found</a></p>
+            }
+
+            @if(Model.Availability == "Checked Out")
+            {
+                <p id="assetPatron">Item Checked Out By: @Model.PatronName</p>
+                <p><a class="btn btn-lg btn-success" role="button" asp-controller="Catalogue" asp-action="CheckIn" asp-route-id= "@Model.Asset_ID">Check In</a></p>
+                <p><a class="btn btn-lg btn-warning" role="button" asp-controller="Catalogue" asp-action="HoldAsset" asp-route-id= "@Model.Asset_ID">Check Hold</a></p>
+            }
+             @if(Model.Availability == "Available")
+            {
+                <p><a class="btn btn-lg btn-info" role="button" asp-controller="Catalogue" asp-action="CheckOut" asp-route-id= "@Model.Asset_ID">Check Out</a></p>
+            }
+            <div class="col-md-4 itemInfo">
+                <table>
+                    <tr>
+                        <td class="assetISBN">ISBN: </td>
+                        <td class="assetISBNValue">@Model.ISBN</td>
+                    </tr>
+                    <tr>
+                        <td class="assetDeweyIndex">Dewey Index: </p></td>
+                        <td class="assetDeweyIndexValue">@Model.DeweyIndex</td>
+                    </tr>
+                    <tr>
+                        <td class="assetCost">Replacement Cost: </p></td>
+                        <td class="assetCostValue">@Model.Cost</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
