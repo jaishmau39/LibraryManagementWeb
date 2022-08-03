@@ -1,7 +1,7 @@
 ﻿@model LibraryManagement.Models.Catalogue.AssetInformation
 
 <div class="container">
-    <div class="page-header clearfix detailHeading">
+    <div class="page-header clearfix moreHeading">
         <h2 class="text-muted">View Library Item</h2>
     </div>
 </div>
@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-4">
             <div>
-                <image class="detailImage" src="@Model.ImageUrl" />
+                <image class="moreImage" src="@Model.ImageUrl" />
             </div>
         </div>
         <div class="col-md-4">
@@ -36,23 +36,23 @@
             {
                 <p><a class="btn btn-lg btn-info" role="button" asp-controller="Catalogue" asp-action="CheckOut" asp-route-id= "@Model.Asset_ID">Check Out</a></p>
             }
-            <div class="col-md-4 itemInfo">
+            </div>
+            <div class="col-md-4 moreInfo">
                 <table>
                     <tr>
-                        <td class="assetISBN">ISBN: </td>
-                        <td class="assetISBNValue">@Model.ISBN</td>
+                        <td class="assetLabel">ISBN: </td>
+                        <td class="assetValue">@Model.ISBN</td>
                     </tr>
                     <tr>
-                        <td class="assetDeweyIndex">Dewey Index: </p></td>
-                        <td class="assetDeweyIndexValue">@Model.DeweyIndex</td>
+                        <td class="assetLabel">Dewey Index: </p></td>
+                        <td class="assetValue">@Model.DeweyIndex</td>
                     </tr>
                     <tr>
-                        <td class="assetCost">Replacement Cost: </p></td>
-                        <td class="assetCostValue">@Model.Cost</td>
+                        <td class="assetLabel">Replacement Cost: </p></td>
+                        <td class="assetValue">@Model.Cost</td>
                     </tr>
                 </table>
             </div>
-
-        </div>
+        
     </div>
 </div>
