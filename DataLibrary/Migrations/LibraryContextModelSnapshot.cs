@@ -405,7 +405,7 @@ namespace DataLibrary.Migrations
                         .IsRequired();
 
                     b.HasOne("DataLibrary.Models.LibraryCard", "LibraryCard")
-                        .WithMany("CheckOuts")
+                        .WithMany("LoanedAssets")
                         .HasForeignKey("LibraryCardCardID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -443,7 +443,7 @@ namespace DataLibrary.Migrations
 
             modelBuilder.Entity("DataLibrary.Models.LibraryCard", b =>
                 {
-                    b.Navigation("CheckOuts");
+                    b.Navigation("LoanedAssets");
                 });
 #pragma warning restore 612, 618
         }

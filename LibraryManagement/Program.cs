@@ -18,6 +18,7 @@ var config = builder.Configuration;
 builder.Services.AddSingleton(config);
 
 builder.Services.AddScoped<ILibraryAsset,LibraryAssetService>();
+builder.Services.AddScoped<ICheckOut, CheckOutService>();
 
 
 //builder.Services.AddApplicationInsightsTelemetry();

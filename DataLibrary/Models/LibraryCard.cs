@@ -12,7 +12,7 @@ namespace DataLibrary.Models
         [Key]
         public int CardID { get; set; }
         public decimal Overdue_Fee { get; set; }
-        public virtual IEnumerable<LoanedAsset> CheckOuts { get; set; }
+        public virtual IEnumerable<LoanedAsset> LoanedAssets { get; set; }
         [Required]
         public DateTime Created_Date { get; set; }
     }

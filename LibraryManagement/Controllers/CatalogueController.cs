@@ -7,12 +7,13 @@ namespace LibraryManagement.Controllers
 {
     public class CatalogueController : Controller
     {
-        //make this public if needed
         private ILibraryAsset _assets;
+        private ICheckOut _checkOuts;
 
-        public CatalogueController(ILibraryAsset assets)
+        public CatalogueController(ILibraryAsset assets, ICheckOut checkOuts)
         {
           _assets = assets;
+            _checkOuts = checkOuts;
         }
         
         public IActionResult Index()
@@ -35,6 +36,13 @@ namespace LibraryManagement.Controllers
         public IActionResult MoreInformation(int Id)
         {
             var Asset = _assets.GetById(Id);
+            var currentHolds = _checkOuts.GetCurrentHolds(Id).Select(
+                h=>new HoldPlacedHistory
+                {
+                    PatronName = _checkOuts.GetCurrentHoldPatron(h.ID),
+                    HoldStatus = _checkOuts.GetCurrentHoldTime(h.ID).ToString("d")
+                }
+                );
 
             var assetInformation = new AssetInformation
             {
@@ -43,11 +51,16 @@ namespace LibraryManagement.Controllers
                 Title = Asset.Title,
                 Cost = Asset.Cost,
                 Year = Asset.Year,
+                Type = _assets.GetType(Id),
                 AuthororDirector = _assets.GetAuthororDirector(Id),
                 DeweyIndex = _assets.GetDeweyIndex(Id),
                 ISBN = _assets.GetISBN(Id),
                 Availability = Asset.Availability.Status,
                 PresentLocation = _assets.GetBranchLocation(Id).Branch_Name,
+                CheckOutHistories = _checkOuts.GetCheckOutHistory(Id),
+                Checkout_Details = _checkOuts.LatestCheckout_Asset(Id),
+                PatronName = _checkOuts.GetCurrentCheckOutPatron(Id),
+                HoldsPlaced = currentHolds
 
             };
             return View(assetInformation);
