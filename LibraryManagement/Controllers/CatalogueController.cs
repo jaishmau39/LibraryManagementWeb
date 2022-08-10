@@ -1,5 +1,6 @@
 ﻿using DataLibrary;
 using LibraryManagement.Models.Catalogue;
+using LibraryManagement.Models.CheckOutAsset;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -13,7 +14,7 @@ namespace LibraryManagement.Controllers
         public CatalogueController(ILibraryAsset assets, ICheckOut checkOuts)
         {
           _assets = assets;
-            _checkOuts = checkOuts;
+          _checkOuts = checkOuts;
         }
         
         public IActionResult Index()
@@ -67,5 +68,70 @@ namespace LibraryManagement.Controllers
 
         }
 
+        public IActionResult CheckOut(int Id)
+        {
+            var asset = _assets.GetById(Id);
+
+            var model = new CheckOutModel
+            {
+                AssetID = Id,
+                Title = asset.Title,
+                ImageUrl = asset.ImageUrl,
+                LibraryCardID = "",
+                IsCheckedOut = _checkOuts.IsCheckedOut(Id)
+            };
+            return View(model);
+        }
+
+        public IActionResult CheckIn(int Id)
+        {
+   
+            _checkOuts.CheckIn_Asset(Id);
+            return RedirectToAction("MoreInformation", new { Id = Id });
+            //return RedirectToAction("Home");
+        }
+
+        public IActionResult Hold(int Id)
+        {
+            var asset = _assets.GetById(Id);
+
+            var model = new CheckOutModel
+            {
+                AssetID = Id,
+                Title = asset.Title,
+                ImageUrl = asset.ImageUrl,
+                LibraryCardID = "",
+                IsCheckedOut = _checkOuts.IsCheckedOut(Id),
+                Hold_Count = _checkOuts.GetCurrentHolds(Id).Count()
+            };
+            return View(model);
+        }
+
+        // 
+        [HttpPost]
+        public IActionResult PlaceCheckOut(int AssetID, int LibraryCardID)
+        {
+            _checkOuts.CheckOut_Asset(AssetID, LibraryCardID);
+            return RedirectToAction("MoreInformation", new { Id = AssetID });
+        }
+        [HttpPost]
+        public IActionResult PlaceHold(int AssetID, int LibraryCardID)
+        {
+            _checkOuts.PlaceHold(AssetID, LibraryCardID);
+            return RedirectToAction("MoreInformation", new { Id = AssetID });
+        }
+
+        [HttpPost]
+        public IActionResult MarkLost(int AssetID)
+        {
+            _checkOuts.MarkLost(AssetID);
+            return RedirectToAction("MoreInformation", new { Id = AssetID });
+        }
+        [HttpPost]
+        public IActionResult MarkFound(int AssetID)
+        {
+            _checkOuts.MarkFound(AssetID);
+            return RedirectToAction("MoreInformation", new { Id = AssetID });
+        }
     }
 }

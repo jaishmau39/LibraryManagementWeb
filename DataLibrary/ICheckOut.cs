@@ -7,7 +7,7 @@ namespace DataLibrary
         LoanedAsset GetById(int loanedAsset_ID);
         void Add(LoanedAsset new_loanedAsset); 
         void CheckOut_Asset(int asset_ID, int libraryCard_ID);
-        void CheckIn_Asset(int asset_ID, int libraryCard_ID);
+        void CheckIn_Asset(int asset_ID);
         string GetCurrentCheckOutPatron(int asset_ID);
 
         IEnumerable<CheckOutHistory> GetCheckOutHistory(int ID);
@@ -20,6 +20,8 @@ namespace DataLibrary
 
         void MarkLost(int asset_ID);
         void MarkFound(int asset_ID);
+
+        bool IsCheckedOut(int ID);
 
     }
 }

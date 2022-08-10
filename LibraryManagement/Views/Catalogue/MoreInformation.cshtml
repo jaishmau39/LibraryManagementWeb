@@ -23,14 +23,14 @@
             @if(Model.Availability == "Lost")
             {
                 <p>This item has been lost.</p>
-                <p><a class="btn btn-lg btn-danger" role="button" asp-controller="Catalogue" asp-action="MarkasFound" asp-route-id= "@Model.Asset_ID">Item Found</a></p>
+                <p><a class="btn btn-lg btn-danger" role="button" asp-controller="Catalogue" asp-action="MarkFound" asp-route-id= "@Model.Asset_ID">Item Found</a></p>
             }
 
             @if(Model.Availability == "Checked Out")
             {
                 <p id="assetPatron">Item Checked Out By: @Model.PatronName</p>
                 <p><a class="btn btn-lg btn-success" role="button" asp-controller="Catalogue" asp-action="CheckIn" asp-route-id= "@Model.Asset_ID">Check In</a></p>
-                <p><a class="btn btn-lg btn-warning" role="button" asp-controller="Catalogue" asp-action="HoldAsset" asp-route-id= "@Model.Asset_ID">Check Hold</a></p>
+                <p><a class="btn btn-lg btn-warning" role="button" asp-controller="Catalogue" asp-action="Hold" asp-route-id= "@Model.Asset_ID">Check Hold</a></p>
             }
              @if(Model.Availability == "Available")
             {

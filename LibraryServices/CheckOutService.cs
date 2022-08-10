@@ -24,7 +24,7 @@ namespace LibraryServices
             _context.SaveChanges();
         }
 
-        public void CheckIn_Asset(int asset_ID, int libraryCard_ID)
+        public void CheckIn_Asset(int asset_ID)
         {
             var now = DateTime.Now;
             var asset = _context.LibraryAssets.FirstOrDefault(a => a.Asset_ID == asset_ID);
@@ -41,6 +41,7 @@ namespace LibraryServices
             {
                 CheckOutToEarliestHold(asset_ID, asset_holds);
             }
+       
 
             //else, update item status to "Available"
             UpdateAssetAvailability(asset_ID, "Available");
@@ -58,6 +59,7 @@ namespace LibraryServices
             _context.SaveChanges();
             CheckOut_Asset(asset_ID, libraryCard.CardID);
         }
+   
 
         public void CheckOut_Asset(int asset_ID, int libraryCard_ID)
         {
@@ -102,7 +104,7 @@ namespace LibraryServices
             return now.AddDays(30);
         }
 
-        private bool IsCheckedOut(int asset_ID)
+        public bool IsCheckedOut(int asset_ID)
         {
             return _context.LoanedAssets.Where(a => a.LibraryAsset.Asset_ID == asset_ID).Any();
         }
@@ -172,7 +174,7 @@ namespace LibraryServices
 
         private void UpdateAssetAvailability(int asset_ID, string asset_status)
         {
-            var asset = _context.LibraryAssets.FirstOrDefault(asset => asset.Asset_ID == asset_ID);
+            var asset = _context.LibraryAssets.FirstOrDefault(a => a.Asset_ID == asset_ID);
             _context.Update(asset);
 
             asset.Availability = _context.AssetStatuses.FirstOrDefault(status => status.Status == asset_status);
@@ -210,7 +212,8 @@ namespace LibraryServices
         public void PlaceHold(int asset_ID, int libraryCard_ID)
         {
             var now = DateTime.Now;
-            var asset = _context.LibraryAssets.FirstOrDefault(asset => asset.Asset_ID == asset_ID);
+            var asset = _context.LibraryAssets.
+                Include(a=>a.Availability).FirstOrDefault(asset => asset.Asset_ID == asset_ID);
             var libraryCard = _context.LibraryCards.
                 FirstOrDefault(a => a.CardID == libraryCard_ID);
 

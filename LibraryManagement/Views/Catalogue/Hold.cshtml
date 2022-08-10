@@ -1,0 +1,37 @@
+﻿@model LibraryManagement.Models.CheckOutAsset.CheckOutModel
+
+<div class="container">
+    <div class="header clearfix moreHeading">
+        <h2 class="text-muted">Place Hold on Library Item</h2>
+    </div>
+
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <p id="itemTitle">@Model.Title</p> 
+                    <image class="moreImage" src="@Model.ImageUrl" />
+                </div>
+            </div>
+
+            <div class="col-md-9"> 
+                <p>There are currently @Model.Hold_Count holds for this item.</p>
+                @using (Html.BeginForm("PlaceHold", "Catalogue", FormMethod.Post))
+                {
+                    @Html.HiddenFor(a => a.AssetID)
+                    <div>
+                        Please enter your Library Card ID.
+                        @Html.TextBoxFor(a=>a.LibraryCardID)
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-info btn-lg">Place Hold</button>
+                    </div>
+                }
+
+
+            </div>
+      
+        </div>   
+     </div>
+</div>
