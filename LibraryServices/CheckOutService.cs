@@ -40,6 +40,7 @@ namespace LibraryServices
             if (asset_holds.Any())
             {
                 CheckOutToEarliestHold(asset_ID, asset_holds);
+                return;
             }
        
 

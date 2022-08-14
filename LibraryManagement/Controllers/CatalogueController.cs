@@ -122,16 +122,16 @@ namespace LibraryManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult MarkLost(int AssetID)
+        public IActionResult MarkLost(int Id)
         {
-            _checkOuts.MarkLost(AssetID);
-            return RedirectToAction("MoreInformation", new { Id = AssetID });
+            _checkOuts.MarkLost(Id);
+            return RedirectToAction("MoreInformation", new { Id = Id });
         }
         [HttpPost]
-        public IActionResult MarkFound(int AssetID)
+        public IActionResult MarkFound(int Id)
         {
-            _checkOuts.MarkFound(AssetID);
-            return RedirectToAction("MoreInformation", new { Id = AssetID });
+            _checkOuts.MarkFound(Id);
+            return RedirectToAction("MoreInformation", new { Id = Id });
         }
     }
 }

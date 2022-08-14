@@ -1,8 +1,97 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Souls Lodge Library";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h3>@ViewData["Title"]</h3> 
+
+	
+
+<section class="why-us">
+		<div class="container">
+	        <div class="row">
+				<div class="col-md-8 offset-md-2">
+					<h2 class="mt-5 text-center">Why Choose Us</h2>
+					<p class="mb-5 text-center">Many happy returns.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						@*<span>01</span>*@
+						<h4><a href="#">Library Catalogue</a></h4>
+						<p>View and manage library assets.</p>
+						<div class="mt-auto border border-light">
+							<a class="btn btn-info btn-block" asp-controller="Catalogue" asp-action="Index">View Catalogue</a>
+						</div>
+						<img src="/images/Catalogue.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						@*<span>02</span>*@
+						<h4><a href="#">Patrons</a></h4>
+						<p>View and manage library patron data.</p>
+						<div class="mt-auto border border-light">
+							<a class="btn btn-info btn-block" asp-controller="Patron" asp-action="Index">View Patrons</a>
+						</div>
+						<img src="/images/Branch.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						@*<span>03</span>*@
+						<h4><a href="#">Branches</a></h4>
+						<p>View and manage library branches.</p>
+						<div class="mt-auto border border-light">
+							<a class="btn btn-info btn-block" asp-controller="Branch" asp-action="Index">View Branches</a>
+						</div>
+						<img src="/images/Patron.jpg" alt="">
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!-- End Why Us Section -->
+
+
+@*<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-self-stretch">
+    <div class="card shadow-lg mb-4">
+        <img src="images/Catalogue.jpg" class="card-img-top" style="width: auto; height: 195px;" alt="">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase">Longer title here that wraps two linesjhtrhv5thq54h53h    5y5hy5v3y53yf</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="mt-auto border border-light">
+                <a href="#" class="btn btn-info btn-block">View Details</a>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-self-stretch">
+    <div class="card shadow-lg mb-4">
+        <img src="~/images/Patron.jpg" class="card-img-top" style="width: auto; height: 195px;" alt="">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase">Longer title here that wraps two lines</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="mt-auto border border-light">
+                <a href="#" class="btn btn-info btn-block">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-self-stretch">
+    <div class="card shadow-lg mb-4">
+        <img src="images/Branch.jpg" class="card-img-top" style="width: auto; height: 195px;" alt="">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase">Longer title here that wraps two lines</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="mt-auto border border-light">
+                <a href="#" class="btn btn-info btn-block">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>*@

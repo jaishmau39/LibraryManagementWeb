@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NkzRNsfXM9zyTgbhG/Vytt5gv99pAgjHdyFJMR+t0aw=",
+  "Hash": "yLevZglxwYEqfkAlHXgyZmn53CrcPua/+6hkG86BWoY=",
   "Source": "LibraryManagement",
   "BasePath": "_content/LibraryManagement",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\images\\Branch.jpg",
+      "SourceId": "LibraryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\",
+      "BasePath": "_content/LibraryManagement",
+      "RelativePath": "images/Branch.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Branch.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\images\\Catalogue.jpg",
+      "SourceId": "LibraryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\",
+      "BasePath": "_content/LibraryManagement",
+      "RelativePath": "images/Catalogue.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Catalogue.jpg"
     },
     {
       "Identity": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\images\\cosmos.png",
@@ -219,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\northroad.png"
+    },
+    {
+      "Identity": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\images\\Patron.jpg",
+      "SourceId": "LibraryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\",
+      "BasePath": "_content/LibraryManagement",
+      "RelativePath": "images/Patron.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Patron.jpg"
     },
     {
       "Identity": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagement\\wwwroot\\images\\physics.png",
