@@ -1,0 +1,53 @@
+﻿@model LibraryManagement.Models.Patron.PatronList
+@{
+    ViewBag.Title = "Patron Index";
+}
+
+@*<h3>@ViewBag.Title</h3>*@
+
+
+<div class="container"id="patronList">
+    <div class="text-center">
+    <h3 class="">@ViewBag.Title</h3>
+    <div class="table-responsive">
+        <table class= "mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp customTable mx-auto w-auto" id="patronListTable">
+            <thead>
+                <tr>
+                    <th>Profile Link</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Library Card Id</th>
+                    <th>Overdue Fees</th>
+                    <th>Home Library</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var person in Model.Patrons_List)
+                {
+                    <tr>
+                        <td>
+                            <a asp-controller="Patron" asp-action="PatronInformation" asp-route-id="@person.Id">(Profile)</a>  
+                        </td>
+                        <td>
+                            @person.LastName
+                        </td>
+                        <td>
+                            @person.FirstName
+                        </td>
+                        <td>
+                            @person.Library_CardId
+                        </td>
+                        <td>
+                            @person.Overdue_Fees
+                        </td>
+                        <td>
+                            @person.LibraryBranch
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>

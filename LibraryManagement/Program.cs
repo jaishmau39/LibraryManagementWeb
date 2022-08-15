@@ -13,12 +13,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<LibraryContext>(options 
     => options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryConnection")));
 
-//Remove 2 lines below
 var config = builder.Configuration;
 builder.Services.AddSingleton(config);
 
 builder.Services.AddScoped<ILibraryAsset,LibraryAssetService>();
 builder.Services.AddScoped<ICheckOut, CheckOutService>();
+builder.Services.AddScoped<IPatron, PatronService>();
 
 
 //builder.Services.AddApplicationInsightsTelemetry();
