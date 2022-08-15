@@ -168,7 +168,15 @@
     }
 
 
+#patronOverdueFee {
+    color: #c62222;
+    font-weight: bold;
+}
 
+#patronNoFee {
+    color: #2f6fc7;
+    font-weight: bold;
+}
 
 
 

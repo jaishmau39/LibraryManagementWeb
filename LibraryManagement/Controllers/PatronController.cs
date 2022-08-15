@@ -1,4 +1,5 @@
 ﻿using DataLibrary;
+using DataLibrary.Models;
 using LibraryManagement.Models.Patron;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,6 +29,27 @@ namespace LibraryManagement.Controllers
                 Patrons_List = AllPatrons_Model
             };
             return View(patronList_model);
+        }
+
+        public IActionResult PatronInformation(int Id) {
+
+            var patron_info = _patron.Get(Id);
+            var patronInfo_Model = new PatronInfo
+                {
+                FirstName = patron_info.FirstName,
+                LastName = patron_info.LastName,
+                Library_CardId = patron_info.Library_Card.CardID,
+                Overdue_Fees = patron_info.Library_Card.Overdue_Fee,
+                LibraryBranch = patron_info.Branch_Location.Branch_Name,
+                Address =patron_info.Address,
+                Holds = _patron.GetHolds(Id),
+                Telephone = patron_info.TelephoneNumber,
+                StartDate = patron_info.Library_Card.Created_Date,
+                CheckOut_History = _patron.GetCheckOutHistory(Id),
+                CheckedOut_Assets = _patron.GetCheckOuts(Id).ToList()?? new List<LoanedAsset>()
+            };
+            return View(patronInfo_Model);
+        
         }
     }
 }
