@@ -1,0 +1,34 @@
+﻿
+@model LibraryManagement.Models.Branch.BranchIndex
+@{
+    ViewBag.Title = "Branch Index";
+}
+
+<div class="container" id="branchIndex">
+    <div class="text-center">
+    <h3 class="">@ViewBag.Title</h3>
+    <div class="table-responsive">
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp customTable mx-auto w-auto" id="branchIndexTable">
+        <thead>
+            <tr>
+                <th>Branch Name</th>
+                <th>Open Now</th>
+                <th>Number Of Assets</th>
+                <th>Number of Patrons</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var b in Model.Branches)
+            {
+                <tr>
+                    <td class="strongTd"><a asp-controller="Branch" asp-action="MoreInformation" asp-route-id="@b.Id">@b.BranchName</a></td>
+                    <td>@b.isOpen</td>
+                    <td>@b.NoOfAssets</td>
+                    <td>@b.NoOfPatrons</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    </div>
+</div>

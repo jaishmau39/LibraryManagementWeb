@@ -19,6 +19,7 @@ builder.Services.AddSingleton(config);
 builder.Services.AddScoped<ILibraryAsset,LibraryAssetService>();
 builder.Services.AddScoped<ICheckOut, CheckOutService>();
 builder.Services.AddScoped<IPatron, PatronService>();
+builder.Services.AddScoped<ILibraryBranch, LibraryBranchService>();
 
 
 //builder.Services.AddApplicationInsightsTelemetry();

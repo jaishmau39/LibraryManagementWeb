@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jaish/source/repos/LibraryManagementWeb/LibraryManagement/Views/Branch/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jaish/source/repos/LibraryManagementWeb/LibraryManagement/Views/Catalogue/CheckOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ3VlXENoZWNrT3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
