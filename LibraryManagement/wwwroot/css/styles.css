@@ -178,11 +178,26 @@
     font-weight: bold;
 }
 
+/*.branchImage {
+    width: 180px;
+    padding: 10px;
+}*/
 
 
 
+.branchInfo {
+    padding-top: 30px;
+}
 
+#branchDescription {
+    width: 500px;
+    padding: 18px 0 12px 4px;
+}
 
+.branchContact {
+    padding: 12px 0 16px 0;
+    font-size: 1.2em;
+}
 
 
 

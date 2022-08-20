@@ -25,7 +25,7 @@ namespace LibraryServices
         }
         public static string displayDay(int DayNumber)
         {
-            return Enum.GetName(typeof(DayOfWeek), DayNumber);
+            return Enum.GetName(typeof(DayOfWeek), DayNumber-1);
         }
         public static string displayTime(int OperationTime)
         {
