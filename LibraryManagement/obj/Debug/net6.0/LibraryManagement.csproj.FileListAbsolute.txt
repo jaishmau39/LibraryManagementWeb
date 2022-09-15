@@ -73,3 +73,5 @@ C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement\bin\Debug\net
 C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement\bin\Debug\net6.0\Microsoft.Extensions.Logging.ApplicationInsights.dll
 C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement\obj\Debug\net6.0\LibraryManagement.Properties.Resources.resources
+C:\Users\jaish\source\repos\LibraryManagementWeb\LibraryManagement\obj\Debug\net6.0\LibraryManagement.csproj.GenerateResource.cache

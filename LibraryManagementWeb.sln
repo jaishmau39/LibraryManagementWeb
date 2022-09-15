@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLibrary", "DataLibrary\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryServices", "LibraryServices\LibraryServices.csproj", "{F3656BC4-77FE-4B8B-AE39-CE12CBBCAF84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementWeb.Tests", "LibraryManagementWeb.Tests\LibraryManagementWeb.Tests.csproj", "{ECE8409E-4799-4553-B363-2A7356E8D8EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementWeb.Tests", "LibraryManagementWeb.Tests\LibraryManagementWeb.Tests.csproj", "{ECE8409E-4799-4553-B363-2A7356E8D8EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "30ieeBuzcZK+cpGMSg0gWLOACGMBhxWXpBiedYZ3SB3LKLPQ3xr/CvUyVpkaibvb0xceLFB20s2DzstpXhUhUw==",
+  "dgSpecHash": "hDYWO0WO9p4K26S4HEBMZZRi2mqciaqdXl3euD0NWjl5MmiuXqxGxW+FEY/Q3hn8uMyis3U5QACXZppDT6LGEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jaish\\source\\repos\\LibraryManagementWeb\\LibraryManagementWeb.Tests\\LibraryManagementWeb.Tests.csproj",
   "expectedPackageFiles": [
@@ -77,6 +77,7 @@
     "C:\\Users\\jaish\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\jaish\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.1.0\\microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512",
     "C:\\Users\\jaish\\.nuget\\packages\\microsoft.testplatform.testhost\\17.1.0\\microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
+    "C:\\Users\\jaish\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\jaish\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\jaish\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\jaish\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

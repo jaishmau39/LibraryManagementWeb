@@ -1,0 +1,21 @@
+version: '3.8'
+services: 
+    codewithvijay:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        environment: 
+            ACCEPT_EULA: "Y"
+            SA_PASSWORD: "SeoulJ39!Kon"
+            MSSQL_PID: Express
+        ports: 
+            - "1433:1433"
+    libraryapi:
+        build: .
+        depends_on: 
+            - LibraryManagement
+        environment: 
+            ServerName: "LibraryManagement"
+            Database: "Lib_ManagementDB"
+            UserName: "SA"
+            Password: "SeoulJ39!Kon"
+        ports: 
+            - "80:80"
